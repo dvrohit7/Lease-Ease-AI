@@ -1,0 +1,48 @@
+:root{ --gap:12px; --radius:14px; --border:#e5e7eb; --muted:#6b7280; }
+*{ box-sizing:border-box; }
+body{ font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial; margin:0; background:#f8fafc; color:#0f172a; }
+.app .container{ max-width:1000px; margin:24px auto; padding:0 16px; }
+
+
+.navbar{ position:sticky; top:0; z-index:10; display:flex; align-items:center; justify-content:space-between; padding:14px 16px; border-bottom:1px solid var(--border); background:#fff; }
+.navbar .brand{ font-weight:800; text-decoration:none; color:inherit; }
+.navbar .nav{ display:flex; align-items:center; gap:var(--gap); }
+.navbar .btn{ padding:8px 14px; border:1px solid var(--border); border-radius:var(--radius); background:#fff; cursor:pointer; text-decoration:none; color:inherit; }
+.navbar .user{ font-size:14px; color:var(--muted); }
+
+
+.card{ background:#fff; border:1px solid var(--border); border-radius:20px; padding:20px; box-shadow:0 6px 24px rgba(0,0,0,.04); }
+.card.narrow{ max-width:520px; margin:40px auto; }
+
+
+.row{ display:flex; align-items:center; }
+.row.between{ justify-content:space-between; }
+.row.gap{ gap:var(--gap); }
+.row.end{ justify-content:flex-end; }
+.vstack{ display:flex; flex-direction:column; gap:var(--gap); }
+
+
+.field{ display:block; margin-bottom:10px; }
+.field .label{ display:block; font-size:14px; margin-bottom:6px; }
+.input{ width:100%; padding:10px 12px; border:1px solid var(--border); border-radius:var(--radius); outline:none; }
+.input:focus{ box-shadow:0 0 0 4px #e5f0ff; border-color:#93c5fd; }
+
+
+.btn{ padding:10px 14px; border:1px solid var(--border); border-radius:var(--radius); background:#fff; cursor:pointer; text-decoration:none; color:inherit; }
+.btn.primary{ background:#111827; color:#fff; border-color:#111827; }
+.btn.danger{ border-color:#fecaca; background:#fee2e2; }
+
+
+.muted{ color:var(--muted); }
+.error{ color:#dc2626; }
+
+
+.table{ display:grid; gap:6px; }
+.thead, .trow{ display:grid; grid-template-columns: 80px 1fr 1fr 1fr 100px 220px; align-items:center; gap:10px; padding:10px; border-bottom:1px solid var(--border); }
+.thead{ font-weight:700; background:#f3f4f6; border-radius:10px; }
+
+
+/* Responsive */
+@media (max-width: 720px){
+.thead, .trow{ grid-template-columns: 60px 1fr 1fr 1fr 80px 160px; font-size:14px; }
+}
